@@ -2,10 +2,12 @@
 
 int main() {
     
+    //variaveis das cartas 1 e 2
     char estado1[5], estado2[5], codigo1[10], codigo2[10], cidade1[10], cidade2[10];
     int populacao1, populacao2, pontos1, pontos2;
     float area1, area2, pib1, pib2, densidadepop1, densidadepop2, pibpercapita1, pibpercapita2;
 
+    //captando dados da carta01
     printf("\nDigite as informações da Carta 1:\n");
     
     printf("Digite o Estado (2 dígitos): ");
@@ -28,11 +30,12 @@ int main() {
 
     printf("Digite o Número de Pontos Turísticos: ");
     scanf("%d", &pontos1);
-
+ 
+    //calculo da densidade populacional e pib per capita da carta 1
     densidadepop1 = populacao1 / area1;
     pibpercapita1 = pib1 / populacao1;
 
-    
+    //captando dados da carta02
     printf("\nDigite as informações da Carta 2:\n");
 
     printf("Digite o Estado (2 dígitos): ");
@@ -56,9 +59,11 @@ int main() {
     printf("Digite o Número de Pontos Turísticos: ");
     scanf("%d", &pontos2);
 
+    //calculo da densidade populacional e pib per capita da carta 1
     densidadepop2 = populacao2 / area2;
     pibpercapita2 = pib2 / populacao2;
         
+    //mostrando os dados da carta 1 e resuldados dos calculos
     printf("\nCarta 1:\n");
     printf("Estado: %s\n", estado1);
     printf("Código: %s\n", codigo1);
@@ -70,7 +75,7 @@ int main() {
     printf("Densidade populacional: %.2f\n", densidadepop1);
     printf("PIB per capita: %.2f\n", pibpercapita1);
    
-    
+     //mostrando os dados da carta 2 e resuldados dos calculos
     printf("\nCarta 2:\n");
     printf("Estado: %s\n", estado2);
     printf("Código: %s\n", codigo2);
@@ -83,8 +88,8 @@ int main() {
     printf("PIB per capita: %.2f\n", pibpercapita2);
   
 
+    //mostrando o resultados da carta que venceu comparando neste caso os pontos turisticos
     printf("\nComparação das Cartas - Pontos Turisticos:\n");
-
     printf("Carta 1 - %s  (%s): %d\n", cidade1,estado1,pontos1);
     printf("Carta 2 - %s  (%s): %d\n", cidade2,estado2,pontos2);
     if(pontos1 > pontos2){
